@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+}
+
+.App {
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around; /* Horizontal alignment */
+  align-items: flex-start; /* Vertical alignment */
+  flex-wrap: wrap; /* Wrap items to new row on smaller screens */
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.gradient-picker {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  /* margin: 10px auto; */
+  padding: 10px;
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.color-stop-list {
+  max-height: 200px; /* Set a max height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.color-stop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.color-stop button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.color-stop button:hover {
+  background: #ff1a1a;
+}
+
+.add-color-button {
+  background-color: skyblue; /* Change to skyblue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-color-button:hover {
+  background-color: #00bfff; /* Lighter shade of skyblue */
+}
+
+button.copy-button {
+  background-color: lightgreen; /* Change to light green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button.copy-button:hover {
+  background-color: #8eff8e; /* Lighter shade of light green */
+}
+
+.preview {
+  width: 100%;
+  height: 200px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview h2 {
+  margin: 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.code-panel {
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 20px;
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.code-panel h2 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.code-panel pre {
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.code-panel button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.code-panel button:hover {
+  background: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column; /* Switch to vertical layout */
+    align-items: center; /* Center items vertically */
+  }
+
+  .gradient-picker {
+    order: 2; /* Change order for vertical layout */
+    margin-top: 20px; /* Increase margin for spacing */
+  }
+}
